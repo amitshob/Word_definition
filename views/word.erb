@@ -8,15 +8,7 @@
 				<li class="ex"><%= example %></li>
 			<% end %>
 		</ul>
-		<form action="/add_example" method="post">
-			<input id='definition' name='definition' type='hidden' value='<%= definition.define() %>'>
-			<input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
-
-			<label for="sentence">Add an example sentence:</label>
-			<input type="text" name="sentence" id="sentence">
-
-			<button type="submit" class="btn btn-primary">Add sentence</button>
-		</form>
+		
 	<% end %>
 </ul>
 
@@ -30,12 +22,9 @@
 	<label for="new_definition">Definition:</label>
 	<input type="text" name="new_definition" id="new_definition">
 
-	<button type="submit" class="btn btn-primary">Add Definition</button>
+	<button type="submit" >Add Definition</button>
 </form>
 
-<form action="/clear_definitions" method="post">
-	<input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
-	<button type="submit" class="btn btn-danger">Clear Definitions</button>
-</form>
-
-<a href="/" class="btn btn-info" role="button">Back to Word List</a>
+<br>
+<br>
+<a href="/" role="button">Back to Word List</a>
