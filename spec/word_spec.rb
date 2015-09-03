@@ -1,7 +1,7 @@
 require('rspec')
 require('word')
 require('definition')
-require('example_sentence')
+
 
 describe(Word) do
 	before() do
