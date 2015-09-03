@@ -1,0 +1,19 @@
+<h1>Word Definition</h1>
+<h3>Click on a word to see its definitions</h3>
+
+<ul>
+	<% @words.each() do |word| %>
+		<li class="words"><a href="/word/<%= word.id() %>"><%= word.name() %></a></li>
+	<% end %>
+</ul>
+
+<h3>Add a word:</h3>
+<form class="add_word" action="/new_word" method="post">
+	<input class="nospace" type="text" name="new_word" id="new_word">
+
+	<button type="submit" class="btn btn-primary">Add Word</button>
+</form>
+
+<form action="/clear_words" method="post">
+	<button type="submit" >Clear All</button>
+</form>
